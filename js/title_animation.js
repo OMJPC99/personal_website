@@ -4,7 +4,7 @@ function break_title() {
     var title_chars = $.trim(title_element.html()).split('');
     title_element.empty();
     for (var i = 0; i < title_chars.length; i++)
-        title_element.append("<span class='letter' id='letter" + i + "' style='display: inline-block;'>" + title_chars[i] + "</span>");
+        title_element.append("<span class='letter preload' id='letter" + i + "' style='display: inline-block;'>" + title_chars[i] + "</span>");
 }
 
 function generate_bezier(x_max, y_max) {
@@ -94,6 +94,8 @@ console.log("parent width/height:", parent_width, parent_height);
 break_title();
 var letters = $('.letter');
 generate_new_stylesheet();
+
+var time = 500;
 letters.each(
     function (index) {
         var cur_rel_position_to_title = $(this).position();
@@ -110,9 +112,12 @@ letters.each(
             'y': (pos_offset['y'] - pos_rel_to_total_parent['y']) * 0.7
         };
         console.log(pos_offset);
-        console.log(pos_rel_to_total_parent)
+        console.log(pos_rel_to_total_parent);
         console.log(rel_pos_offset);
+        //setTimeout(function () {
         generate_keyframe_rule($(this), index, rel_pos_offset['x'] + "px", rel_pos_offset['y'] + "px", 3);
+        //}, time);
+        time+=500;
     }
 );
 
