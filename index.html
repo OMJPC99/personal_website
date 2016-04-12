@@ -23,6 +23,16 @@
         <script src="js/matter.js"></script>
 
         <style>
+            .preload {
+                -webkit-animation: none !important;
+                animation: none !important;
+            }
+
+            .preload::after {
+                -webkit-animation: none !important;
+                animation: none !important;
+            }
+
             .preload * {
                 -webkit-animation: none !important;
                 animation: none !important;
@@ -56,10 +66,13 @@
         </nav>
 
         <div id="main" class="container-fluid">
-            <div id="lander" class="preload">
+            <div id="lander" class="">
                 <div id="title">
                     Theodore Ando
                 </div>
+            </div>
+            <div id="about">
+                About
             </div>
         </div>
 
@@ -73,7 +86,17 @@
         <script src="js/title_animation.js"></script>
         <script>
             $(window).load(function() {
-                $("#lander").removeClass("preload");
+                setTimeout(function () {
+                    $("#lander").removeClass("preload");
+                    var time = 250;
+                    $(".letter").each(function () {
+                        var letter = $(this);
+                        setTimeout(function () {
+                            letter.removeClass("preload");
+                        }, time);
+                        time += 250;
+                    });
+                }, 0);
             });
         </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

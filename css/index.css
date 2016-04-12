@@ -146,6 +146,7 @@ body {
 
 #main {
     position: relative;
+    left: 10px;
     z-index: 5;
     padding: 0 0 0 15px;
     margin: 0;
@@ -172,6 +173,10 @@ body {
     font-size: calc(75vw / .625 / 13);
     text-align: center;
     color: rgb(241, 241, 241);
+}
+
+#about {
+    height: 100vh;
 }
 
 
