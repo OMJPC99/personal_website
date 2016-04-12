@@ -157,7 +157,7 @@ body {
 
 #lander {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bahamas_aerial.png") no-repeat fixed center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/cow.png") no-repeat fixed center;
     background-size: 100% 100%;
 }
 
