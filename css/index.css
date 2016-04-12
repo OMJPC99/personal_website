@@ -1,0 +1,192 @@
+
+/* Account for the collapsed sidebar
+ *
+ */
+
+body {
+    padding-left: 50px;
+}
+
+/* ----------------------------------------------------------- *
+ *                       Side Bar                              *
+ * ----------------------------------------------------------- */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 25;
+
+    min-width: 75px;
+    max-width: 10vw;
+    height: 100vh;
+
+    background-color: rgba(42, 42, 83, 1);
+
+    transition: min-width 0.5s ease, max-width 0.5s ease;
+}
+
+.sidebar.sidebar-collapsed {
+    min-width: 200px;
+    max-width: 50vw;
+
+    box-shadow: 0 ;
+}
+
+.sidebar-toggle {
+    color: rgb(241, 241, 241);
+
+    position: relative;
+    float: right;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.sidebar-toggle:focus {
+    outline: 0;
+}
+
+#sidebar-toggle-button {
+    position: absolute;
+    top: 50vh;
+    right: 0;
+
+    transform: translateY(-50%);
+    min-width: 50px;
+    max-width: 10vw;
+}
+
+#menu-toggle-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    height: 100vw;
+}
+
+/* ----------------------------------------------------------- *
+ *                       Side Menu                             *
+ * ----------------------------------------------------------- */
+
+#sidebar-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+
+    width: 75%;
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+
+    transition: transform 0.5s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: none;
+}
+
+#sidebar-content.sidebar-content-collapsed {
+    transform: translateX(-200%);
+}
+
+#sidebar-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar-content ul li {
+    margin-top: 10px;
+}
+
+#sidebar-content ul li:first-child {
+    margin-top: 0;
+}
+
+#sidebar-content ul a {
+    color: rgb(241, 241, 241);
+}
+
+
+/* ----------------------------------------------------------- *
+ *                       Branding                              *
+ * ----------------------------------------------------------- */
+
+.navbar-brand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    text-align: center;
+    font-size: 3em;
+    color: rgb(241, 241, 241);
+    display: block;
+
+    padding: 20px 10px 0 10px;
+
+    transition: color 0.5s ease;
+
+    z-index: 100;
+}
+
+.navbar-brand:hover {
+    color: rgb(255, 113, 75);
+}
+
+/* ----------------------------------------------------------- *
+ *                       Main Page                             *
+ * ----------------------------------------------------------- */
+
+#main {
+    position: relative;
+    z-index: 5;
+    padding: 0 0 0 15px;
+    margin: 0;
+}
+
+/* ----------------------------------------------------------- *
+ *                        Landing                              *
+ * ----------------------------------------------------------- */
+
+#lander {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bahamas_aerial.png") no-repeat fixed center;
+    background-size: 100% 100%;
+}
+
+#title {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 75vw;
+    margin: auto;
+
+    font-family: 'Megrim', cursive;
+    font-size: calc(75vw / .625 / 13);
+    text-align: center;
+    color: rgb(241, 241, 241);
+}
+
+
+/* ----------------------------------------------------------- *
+ *                       Utility                               *
+ * ----------------------------------------------------------- */
+
+.rotate{
+    -moz-transition: -moz-transform 0.4s linear;
+    -webkit-transition: -webkit-transform 0.4s linear;
+    transition: transform 0.4s linear;
+}
+
+.rotate.down{
+    -moz-transform:rotate(180deg) translateY(50%) !important;
+    -webkit-transform:rotate(180deg) translateY(50%) !important;
+    transform:rotate(180deg) translateY(50%) !important;
+}

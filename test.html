@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .preload * {
+            -webkit-transform: none !important;
+            -moz-transform: none !important;
+            transform: none !important;
+
+            -webkit-animation: none !important;
+            animation: none !important;
+        }
+
+        .preload *::after {
+            -webkit-transform: none !important;
+            -moz-transform: none !important;
+            transform: none !important;
+
+            -webkit-animation: none !important;
+            animation: none !important;
+        }
+    </style>
+    <link rel="stylesheet" href="css/test.css">
+    <link href='https://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
+</head>
+<body class="preload" style="height: 100vh">
+    <div id="title" style="position:relative; top: 300px; left: 300px; font-family: 'Megrim', cursive; font-size: 24px">
+        Theodore Ando
+    </div>
+    <!--<div class="demo-dot"></div>-->
+</body>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="js/title_animation.js"></script>
+<script>
+    $(window).load(function() {
+        $("body").removeClass("preload");
+    });
+</script>
+</html>
