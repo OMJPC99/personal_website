@@ -120,14 +120,3 @@ letters.each(
         time+=500;
     }
 );
-
-//break_title();
-//$('#title').css({display: 'block'});
-//var letters = $('.letter');
-//letters.css({transition: 'all 0.5s ease'});
-//letters = letters.toArray();
-//for (var i = 0; i < letters.length; i++) letters[i] = new Letter(letters[i]);
-//console.log(letters);
-//
-//generate_new_stylesheet();
-//for (var i = )

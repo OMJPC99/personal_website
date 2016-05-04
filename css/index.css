@@ -175,10 +175,21 @@ body {
     color: rgb(241, 241, 241);
 }
 
-#about {
-    height: 100vh;
+.section {
+    min-height: 100vh;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
+.contact-header {
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 0.5em;
+    font-size: 16px;
+}
+
+.p {
+    margin-bottom: 0.5em;
+}
 
 /* ----------------------------------------------------------- *
  *                       Utility                               *
